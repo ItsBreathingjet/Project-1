@@ -7517,9 +7517,9 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Project-1:-Defining-a-Problem-and-Data-Understanding"><strong>Project 1: Defining a Problem and Data Understanding</strong><a class="anchor-link" href="#Project-1:-Defining-a-Problem-and-Data-Understanding">¶</a></h1><p>The data set that I will be using is the [Global Music Streaming Listener Preferences Analysis] (<a href="https://github.com/SDVNishant9/Global-Music-Streaming-Listener-Preferences-Analysis">https://github.com/SDVNishant9/Global-Music-Streaming-Listener-Preferences-Analysis</a>).</p>
-<p>This dataset is a collection of 5,000 users on different music streaming platforms and their preferences for different types of music based on many factors like preferred genres, preferred artists, preferred streaming platforms, country of residence, age, etc.</p>
-<p>The questions that I primarily hope to answer from this data set is the following:</p>
+<h1 id="Project-1:-Defining-a-Problem-and-Data-Understanding"><strong>Project 1: Defining a Problem and Data Understanding</strong><a class="anchor-link" href="#Project-1:-Defining-a-Problem-and-Data-Understanding">¶</a></h1><h2 id="Section-0:-Data-used-in-this-Project">Section 0: Data used in this Project<a class="anchor-link" href="#Section-0:-Data-used-in-this-Project">¶</a></h2><p>The data set that I will be using is the [Global Music Streaming Listener Preferences Analysis] (<a href="https://github.com/SDVNishant9/Global-Music-Streaming-Listener-Preferences-Analysis">https://github.com/SDVNishant9/Global-Music-Streaming-Listener-Preferences-Analysis</a>).</p>
+<p>This dataset is a collection of 5,000 users on different music streaming platforms and their preferences for different types of music based on many factors like preferred genres, preferred artists, preferred streaming platforms, country of residence, age, etc. This dataset does contain limitations as this data set was collected from a sample of 5,000 users which is a very small representation compared to the entire population that listens to music. This data is also only collected from streaming services so if a user only listens to music via Radio, they will not be included in this data set which can skew overall results.</p>
+<h2 id="Section-0.1:-Problem-Statement">Section 0.1: Problem Statement<a class="anchor-link" href="#Section-0.1:-Problem-Statement">¶</a></h2><p>The questions that I primarily hope to answer from this data set is the following:</p>
 <ul>
 <li><p>How does a users music preference change as they get older?</p>
 </li>
@@ -7554,7 +7554,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setup Code 1 - Import necessary libraries (WILL NOT WORK IF THIS IS NOT RAN)</span>
@@ -7583,7 +7583,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Step Code 2 - Load the dataset(WILL NOT WORK IF THIS IS NOT RAN)</span>
@@ -7609,7 +7609,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">music_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -7623,7 +7623,7 @@ We will be using the following libraries:</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7756,7 +7756,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">music_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
@@ -7798,7 +7798,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">music_data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -7812,7 +7812,7 @@ We will be using the following libraries:</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7930,7 +7930,7 @@ We will be using the following libraries:</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Section-2:-Data-Understanding/Visualization">Section 2: Data Understanding/Visualization<a class="anchor-link" href="#Section-2:-Data-Understanding/Visualization">¶</a></h1><p>We will now visualize the data to get a better understanding of what the data looks like in accordance to the questions we are trying to answer.</p>
-<h2 id="Section-2.1:-Genre-Preferences-as-a-user-gets-older.">Section 2.1: Genre Preferences as a user gets older.<a class="anchor-link" href="#Section-2.1:-Genre-Preferences-as-a-user-gets-older.">¶</a></h2><p>We will start by visualizing the genre preferences as a user gets older using a Line Plot.</p>
+<h2 id="Section-2.1:-Genre-Preferences-as-a-user-gets-older.">Section 2.1: Genre Preferences as a user gets older.<a class="anchor-link" href="#Section-2.1:-Genre-Preferences-as-a-user-gets-older.">¶</a></h2><p>We will start by visualizing the genre preferences as a user gets older using a Heatmap.</p>
 </div>
 </div>
 </div>
@@ -7939,7 +7939,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Group the data by age and genre to count the number of users in each genre within each age group</span>
@@ -7999,6 +7999,9 @@ We will be using the following libraries:</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Results-of-Data-Visualization-2.1">Results of Data Visualization 2.1<a class="anchor-link" href="#Results-of-Data-Visualization-2.1">¶</a></h2><p>With this heatmap we can see a visualization of the preferences to every single genre for every age group. When looking for the exact trend in which you can see the transition of top genres as users get older varies. Using a heatmap to show how a user's music preferences changes as they get older has been somewhat eye opening for me as it shows that there are larger disparities in music genre preferences when users are younger and this levels out somewhat as the age of the user increases.</p>
+<ul>
+<li><strong>NOTE</strong> There are limitations to this dataset that may skew the results of this visualization. The age range is only from 13-59 so users outside of this range are not represented in this dataset which may skew the results. The age range is also not evenly distributed across all ages which may also skew the results putting more users.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -8018,7 +8021,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Group the data by country and genre to count the number of users in each genre per country</span>
@@ -8083,6 +8086,9 @@ We will be using the following libraries:</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Results-of-Data-Visualization-2.2">Results of Data Visualization 2.2<a class="anchor-link" href="#Results-of-Data-Visualization-2.2">¶</a></h2><p>After creating our grouped bar chart to help determine the top genre of each of the countries. I am a little shocked to some of the results I found. From growing up constantly listening to the radio when in the car with my parents because they were not up to the times with streaming music, a lot of the music that I would hear in the "Top 10's" and "Billboard 100's" would be primarily pop songs so seeing that the top genre for the USA is actually EDM is suprising to me. Granted there are only 5k users data within this file so that could certainly skew the overall results, but even from looking through the data set and seeing some of the top artists that are listed throughout the data set the genre that these artists are primarily known for do not correlate to the preferred genre for their country of origin.</p>
+<ul>
+<li><strong>NOTE</strong> This dataset is small (5000 users) with only 10 countries listed. Along with only baseline genres being and not including niche genres, these results may not be completely accurate compared to the overall listening preferences of the world.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -8102,7 +8108,7 @@ We will be using the following libraries:</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Group the data by time of day and genre to count the number of users for each genre at each time</span>
@@ -8174,6 +8180,8 @@ We will be using the following libraries:</p>
 </li>
 <li><p>Every other genre follows the trends as I would be expect based on the general consensus of the popularity of each genre.</p>
 </li>
+<li><p><strong>NOTE</strong> Due to the small size of the data set and the genres listed in the dataset are limited to baseline genres and do not include other popular genres such as Indie/Alternative, Punk, Soft Rock vs Hard Rock, etc.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -8189,7 +8197,7 @@ We will be using the following libraries:</p>
 <ul>
 <li><p>Younger users show a wider disparity in genre preferences with their primary preferenes towards Pop and EDM, with certain genres being more popular than others. As users age, the preferenes tend to level out with fewer extreme differences between genres</p>
 </li>
-<li><p>Music preferences evolve with age, with youunger users favoring more energetic and mainstream generes, while older users lean toward more divere and mellow genres. This suggests that age plays a role in shaping music preferences.</p>
+<li><p>Music preferences evolve with age, with younger users favoring more energetic and mainstream generes, while older users lean toward more diverse range of genres, which tend to be more mellow. This suggests that age plays a role in shaping music preferences.</p>
 </li>
 <li><p>Genre preferences are influenced by cultural and regional factors. While some genres like Pop and EDM have global appeal, others are more localized. This shows the importance of considering cultural context when analyzing music trends and more than likely affects how much of that genre is created within that region as they know the people of that region prefer that genre more.</p>
 </li>
@@ -8231,6 +8239,27 @@ We will be using the following libraries:</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Section-5:-Summary">Section 5: Summary<a class="anchor-link" href="#Section-5:-Summary">¶</a></h1><p>This project explored how music preferences vary by age, country of origin, and time of day using a dataset of 5,000 global music streaming users. The analysis revealed that younger users gravitate toward energetic genres like Pop and EDM, while older users prefer more diverse and mellow genres such as Rock and Jazz. Regional differences show the cultural influence on music preferences, with certain genres dominating over others in specific countries. Additionally, time of day significantly impacts listening preferences such as genres, with energetic genres like EDM and Rock being popular during active periods (morning and nights some people are more active) and calming genres like Reggae dominating at night for those that are not active and are winding down. These insights have practical applications in personalizing music recommendations, optimizing marketing strategies, and planning events, ultimately enhancing user engagement and satisfaction in the music streaming industry.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=504f1bc4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Section-6:-References">Section 6: References<a class="anchor-link" href="#Section-6:-References">¶</a></h1><ol>
+<li><a href="https://github.com/SDVNishant9/Global-Music-Streaming-Listener-Preferences-Analysis">Global Music Streaming Listener Preferences Analysis</a><ul>
+<li>This is the original location in which I found the data set that I used in this project.</li>
+</ul>
+</li>
+<li><a href="https://chat.openai.com/">ChatGPT</a><ul>
+<li>I used ChatGPT to help me with my research decisions such as which visualizations to use to best represent the data set in the manner I want in order to answer my questions.</li>
+<li>I used ChatGPT to help expand my knowledge of creating visualizations such as using it to find all of the color options for my visualizations so that I can easier to understand and make them more accessible to those with color-vision impairments such as myself.</li>
+</ul>
+</li>
+</ol>
 </div>
 </div>
 </div>
